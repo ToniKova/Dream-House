@@ -1,0 +1,42 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	padding: 100px;
+	background-color: var(--page-bg);
+	color: var(--text-color);
+  font-family: var(--font-main);
+}
+
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.main {
+	flex-grow: 1;
+}
+
+p {
+	// font-weight: 700;
+}
+
+
+/*====================ticky-footer====*/ 
+// html, body {
+// 	// min-height: 100vh;
+// 	// display: flex;
+// 	// flex-direction: column;
+// }
+
+// .footer {
+// 	// margin-top: auto;
+// }
+
+// .footer {
+// padding: 60px 0;
+// background-color: #e3e3e3;
+// }
