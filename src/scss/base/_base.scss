@@ -3,10 +3,9 @@ html {
 }
 
 body {
-	padding: 100px;
-	background-color: var(--page-bg);
-	color: var(--text-color);
-  font-family: var(--font-main);
+	// background-color: var(--page-bg);
+	// color: var(--text-color);
+  // font-family: var(--font-main);
 }
 
 .wrapper {
@@ -14,15 +13,20 @@ body {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
+	position: relative;
+
 }
 
 .main {
 	flex-grow: 1;
 }
 
-p {
-	// font-weight: 700;
+
+.text {
+	font-family: var(--font-opensans);
+	font-weight: 300;
 }
+
 
 
 /*====================ticky-footer====*/ 

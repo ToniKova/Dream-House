@@ -1,18 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&family=Poiret+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+
 @font-face {
-	font-family: 'BrunoAce-Regular';
-	src:url('../fonts/BrunoAce-Regular.woff2') format('woff2'),
-			url('../fonts/BrunoAce-Regular.woff') format('woff'),
-			url('../fonts/BrunoAce-Regular.ttf') format('truetype');
+	font-family: 'BrunoAce';
+	src:url('../fonts/bruno-ace.woff2') format('woff2'),
+			url('../fonts/bruno-ace.woff') format('woff'),
+			url('../fonts/bruno-ace.ttf') format('truetype');
 	font-weight: 700;
 }
-// @font-face {
-// 	font-family: 'Roboto-Bold';
-// 	src: url('fonts/Roboto-Bold.eot');
-// 	src: local('fonts/Roboto-Bold'), local('../Stolzl-Book'),
-// 			url('fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
-// 			url('fonts/Roboto-Bold.woff2') format('woff2'),
-// 			url('fonts/Roboto-Bold.woff') format('woff'),
-// 			url('fonts/Roboto-Bold.ttf') format('truetype');
-// 	font-weight: 700;
-// 	font-style: normal;
-// }
+
