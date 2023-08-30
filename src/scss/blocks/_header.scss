@@ -2,7 +2,8 @@
 .header {
   position: relative;
   height: 100vh;
-  background-image: url('../img/one-slide-img.png');
+  // background-image: url('../img/one-slide-img.png');
+  background-image: url('../../img/test-1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 5;
@@ -18,6 +19,8 @@
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
   }
+  
+  
 
   &__wrapper {
     background: rgba(148, 148, 148, 0.199);
@@ -271,6 +274,92 @@
     position: absolute;
     top: 267px;
     left: 249px;
+   
+  }
+
+
+  /*====================================================header--forma*/
+
+
+
+  &__forma {
+    z-index: 100;
+    padding: 81px 120px;
+    pointer-events: all;
+    position: absolute;
+    background: #fff;
+    bottom: 0;
+    right: 0;
+    max-width: 740px;
+  }
+
+
+  &__wrapper-input {
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+    
+  }
+
+  &__label {
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: var(--font-opensans);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: 0.4s;
+
+  }
+
+  &__input {
+    padding: 0px 0px 5px 0px;
+    font-family: var(--font-opensans);
+    font-size: 18px;
+    color: #000;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);   
+
+  }
+
+  &__box-btn {
+    display: flex;
+    align-items: center;
+  }
+
+  &__form-btn {
+    color: var(--hover-color);
+    font-family: var(--font-opensans);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 9px;
+    text-transform: uppercase;
+    margin-right: 40px;
+  }
+
+}
+
+
+.header__input:focus + .header__label,
+.header__input:not(:focus):valid + .header__label {
+  top: -20px;
+  transition: 0.4s;
+  font-size: 14px;
+}
+
+.global {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  img {
+
   }
 }
 
