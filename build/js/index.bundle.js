@@ -1,0 +1,1 @@
+new Swiper(".swiper",{direction:"vertical",parallax:!0,speed:700,keyboard:{enabled:!0},pagination:{el:".header__pagination",clickable:!0},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}});

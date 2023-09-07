@@ -1,25 +1,36 @@
 
-// const swiper = new Swiper('.swiper', {
-//   // Optional parameters
-//   direction: 'vertical',
-//   loop: true,
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'vertical',
+  // loop: true,
+  parallax: true,
+  speed: 700,
+  // mousewheel: {
+  //   sensitivity: 1,
+  // },
 
-//   // If we need pagination
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
+  keyboard: {
+    enabled: true
+  },
 
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
 
-//   // And if we need scrollbar
-//   scrollbar: {
-//     el: '.swiper-scrollbar',
-//   },
-// });
+  // If we need pagination
+  pagination: {
+    el: '.header__pagination',
+    clickable: true, 
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  // scrollbar: {
+  //   el: '.swiper-scrollbar',
+  // },
+});
 
 
 
