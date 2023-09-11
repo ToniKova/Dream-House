@@ -384,6 +384,13 @@
 }
 
 
+
+/*====================================================================================================================================================*/
+
+
+
+
+
 @media(max-width: 1700px) {
   .header {
 
@@ -428,10 +435,46 @@
     }
 
     &__nav-right {
-      margin-right: 70px;
+      margin-right: 70px
+    }
+
+    &__box-btn {
+      svg {
+        width: 7.08vw ;
+      }
+    }
+
+    &__forma {
+      width: 38.54vw;
+      padding: 4.22vw 6.25vw;
+    }
+
+    &__form-btn {
+      font-size: 1.04vw;
+      letter-spacing: 0.47vw;
+      margin-right: 2.08vw;
+    }
+
+    &__input {
+      font-size:0.94vw;
+    }
+
+    &__label {
+      font-size: 0.94vw;
+    }
+
+    &__pagination {
+      height: 8.542vw;
+   
     }
 
   }
+  .header__input:focus + .header__label,
+  .header__input:not(:focus):valid + .header__label {
+  top: -20px;
+  transition: 0.4s;
+  font-size: 0.73vw;
+}
 }
 
 @media(max-width: 1440px) {

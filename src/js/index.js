@@ -1,3 +1,18 @@
+function f1 () {
+  if (window.innerWidth <= 1150) {
+    if (swiper) {
+      swiper.destroy()
+    }
+  } else {
+    if (!swiper) {
+      swiper = new Swiper('.swiper', {
+
+      })
+    }
+  }
+}
+
+
 
 const swiper = new Swiper('.swiper', {
   // Optional parameters
@@ -5,6 +20,7 @@ const swiper = new Swiper('.swiper', {
   // loop: true,
   parallax: true,
   speed: 700,
+  effect: 'fade',
   // mousewheel: {
   //   sensitivity: 1,
   // },
@@ -25,20 +41,10 @@ const swiper = new Swiper('.swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-
-  // And if we need scrollbar
-  // scrollbar: {
-  //   el: '.swiper-scrollbar',
-  // },
 });
 
+f1 ()
+window.addEventListener('resize',f1 ())
 
 
 
-
- // import swiper from "./modules/swiper";
-// swiper()
-
-// import mobileNav from './modules/mobile-nav.js';
-// mobileNav();
-// import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs'
