@@ -1,11 +1,19 @@
+<!-- Slider main container -->
 <div class="swiper">
+  <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      @@include('slide-01.html')
-    </div>
-    <div class="swiper-slide">
-      @@include('slide-02.html')
-    </div>
-    
+    <!-- Slides -->
+    <div class="swiper-slide">@@include('./slide-one.html')</div>
+    <div class="swiper-slide">@@include('./slide-two.html')</div>
+    <!-- <div class="swiper-slide">Slide 3</div> -->
   </div>
+
+  <div class="swiper-pagination"></div>
+
+  <!--  
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div> -->
+
+  <!-- If we need scrollbar -->
+  <!-- <div class="swiper-scrollbar"></div> -->
 </div>

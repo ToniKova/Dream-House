@@ -1,1 +1,1 @@
-!function(){function e(){window.innerWidth<=1150?n&&n.destroy():n||(n=new Swiper(".swiper",{}))}const n=new Swiper(".swiper",{direction:"vertical",parallax:!0,speed:700,effect:"fade",keyboard:{enabled:!0},pagination:{el:".header__pagination",clickable:!0},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}});e(),window.addEventListener("resize",e())}();
+!function(){"use strict";new Swiper(".swiper",{direction:"vertical",loop:!0,parallax:!0,speed:700,mousewheel:{sensitivity:1},keyboard:{enabled:!0},pagination:{el:".swiper-pagination",clickable:!0}})}();

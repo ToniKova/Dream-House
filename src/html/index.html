@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,23 +10,23 @@
 		<link rel="stylesheet" href="./css/main.css">
 	</head>
 	<body>
-		<div class="wrapper">
-			<header class="header">
-				<!-- Swiper -->
-				@@include('blocks/swiper.html')
+		<header class="header">
+			<!-- Swiper -->
+
+			@@include('blocks/swiper.html')
+
+			<!-- Slider content -->
+
+			
 
 
-				<!-- Slider content -->
-  			<!-- @@include('blocks/header__slide-1.html') -->
 
+			<!-- Header content -->
+			
+			@@include('blocks/header__content.html')
+		</header>
+	
 
-
-				<!-- Header content -->
-				@@include('blocks/header__content.html')
-				@@include('blocks/forma.html')
-
-			</header>
-		</div>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 		<script src="./js/index.bundle.js"></script>
 	</body>

@@ -1,0 +1,56 @@
+.pagination {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  pointer-events: all;
+  // transform: rotate(90deg) translate(50%, 100%);
+  transform-origin: right top;
+
+  svg {
+    stroke: #fff;
+  }
+  
+  &__wrapper {
+    display: flex;
+    // gap: 50px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__btn-up {
+    transition: 0.3s;
+    &:hover {
+      svg {
+        transition: 0.3s;
+        stroke: var(--hover-color);
+      }
+    }
+  }
+  &__btn-down {
+    transition: 0.3s;
+    &:hover {
+      svg {
+        transition: 0.3s;
+        stroke: var(--hover-color);
+      }
+    }
+  }
+
+  &__counter-wrapper {
+    // display: flex;
+    width: 80px;
+    transform: rotate(90deg);
+    background: rgb(116, 104, 104);
+    
+  }
+
+  &__counter-span {
+    &:first-child {
+      
+    }
+  }
+
+  
+}
+.active-couter-span {
+}

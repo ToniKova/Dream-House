@@ -1,5 +1,5 @@
 :root {
-	--container-width: 1594px;
+	--container-width: 1595px;
 	--container-padding: 15px;
 
 	--font-bruno: 'BrunoAce', sans-serif;
@@ -8,15 +8,18 @@
 
 	
 
-	--page-bg: #fff;
+	--page-bg: #292727;
 	// --text-color: #000;
 	--text-color: #fff;
 	--hover-color: #ffac30;
 	--accent: #ac182c;
+	--input-color: #ffffff9a;
 
   --laptop-size: 1199px;
 	--tablet-size: 959px;
 	--mobile-size: 599px;
+
+	--transition-slide: opacity 1.3s ease;
 }
 
 .dark {

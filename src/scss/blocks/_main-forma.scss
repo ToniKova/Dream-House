@@ -1,0 +1,116 @@
+.header {
+  &__forma {
+    z-index: 100;
+    padding: 50px 80px;
+    // padding: 3.13vw 5vw;
+    pointer-events: all;
+    position: absolute;
+    backdrop-filter: blur(10px);
+    background-color: #ffffff18;
+    bottom: 0;
+    right: 0;
+    max-width: 740px;
+    // max-width: 46.25vw;
+    border-radius: 4px;
+  }
+
+  &__wrapper-input {
+    position: relative;
+    margin-bottom: 30px;
+    // margin-bottom: 1.88vw;
+  }
+
+  &__label {
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    // color:  rgba(255, 255, 255, 0.5);
+    color: var(--input-color);
+    font-family: var(--font-opensans);
+    font-size: 16px;
+    // font-size: 1vw;
+    font-weight: 300;
+    transition: 0.4s;
+  }
+
+  &__input {
+    padding: 0px 0px 5px 0px;
+    font-family: var(--font-opensans);
+    font-size: 18px;
+    // font-size: 1.13vw;
+    color: #cccccc;
+    width: 100%;
+    // border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid var(--input-color);
+  }
+
+  &__box-btn {
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    svg {
+      stroke: var(--input-color);
+      width: 7.08vw;
+    }
+    &:hover {
+      .header__form-btn {
+        color: var(--hover-color);
+        transition: 0.3s;
+      }
+      svg {
+        stroke: var(--hover-color);
+        transition: 0.3s;
+      }
+    }
+  }
+
+  &__form-btn {
+    color: var(--input-color);
+    font-family: var(--font-opensans);
+    font-size: 20px;
+    // font-size: 1.25vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    // letter-spacing: 7px;
+    letter-spacing: 0.44vw;
+    text-transform: uppercase;
+    margin-right: 2.5vw;
+    transition: 0.3s;
+  }
+}
+
+.header__input:focus + .header__label,
+.header__input:not(:focus):valid + .header__label {
+  top: -20px;
+  transition: 0.4s;
+  font-size: 14px;
+  color: var(--hover-color);
+  transition: 0.3s;
+}
+
+@media (max-width: 1900px) {
+  .header {
+    &__forma {
+      padding: 3.13vw 5vw;
+      max-width: 46.25vw;
+    }
+    &__wrapper-input {
+      margin-bottom: 1.88vw;
+    }
+    &__label {
+      font-size: 1vw;
+    }
+    &__input {
+      font-size: 1.13vw;
+    }
+    &__form-btn {
+      font-size: 1.25vw;
+    }
+  }
+}
+@media (max-wigth: 1440px) {
+}
+// @media(max-wigth:1600px) {}
+// @media(max-wigth:1600px) {}
