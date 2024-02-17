@@ -93,7 +93,7 @@
 @media (max-width: 1900px) {
   .header {
     &__forma {
-      padding: 3.13vw 5vw;
+      padding: 2.2vw 2.9vw;
       max-width: 46.25vw;
     }
     &__wrapper-input {
@@ -114,3 +114,12 @@
 }
 // @media(max-wigth:1600px) {}
 // @media(max-wigth:1600px) {}
+
+
+@media (max-width: 1023px) {
+  .header {
+    &__forma {
+      display: none;
+    }
+  }
+} 

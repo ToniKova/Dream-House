@@ -1,18 +1,31 @@
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-	background-color: var(--page-bg);
-	color: var(--text-color);
+  background-color: var(--page-bg);
+  color: var(--text-color);
   font-family: var(--font-main);
+  // overflow: scroll;
 }
 
 .swiper {
   width: 100%;
   height: 100vh;
+  // overflow: scroll;
+}
+.swiper-scroll {
+  overflow: scroll;
 }
 
+.swiper-slide:nth-child(2) {
+  // display: none;
+}
+
+// .swiper-wrapper {
+//   pointer-events: none;
+//   touch-action: none;
+// }
 
 // .slide-img {
 // 	position: absolute;
@@ -23,7 +36,7 @@ body {
 // 	width: 100%;
 // 	height: 100%;
 // 	object-fit: cover;
-	
+
 // }
 
 // .js-slide {
@@ -42,14 +55,11 @@ body {
 // 	opacity: 1;
 // }
 
-
-
 // .btn-active {
 // 	background: red;
 // 	padding: 20px;
-	
-// }
 
+// }
 
 // .wrapper {
 // 	min-height: 100vh;
@@ -64,11 +74,7 @@ body {
 // 	flex-grow: 1;
 // }
 
-
-
-
-
-/*====================ticky-footer====*/ 
+/*====================ticky-footer====*/
 // html, body {
 // 	// min-height: 100vh;
 // 	// display: flex;

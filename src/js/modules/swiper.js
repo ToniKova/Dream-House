@@ -1,4 +1,4 @@
-export default swiper
+export default swiper;
 
 
 const swiper = new Swiper('.swiper', {
@@ -7,21 +7,28 @@ const swiper = new Swiper('.swiper', {
   loop: true,
   parallax: true,
   speed: 700,
-  // effect: 'fade',
-    mousewheel: {
+  // effect: "fade",
+  mousewheel: {
     sensitivity: 1,
   },
-    keyboard: {
-    enabled: true
+  keyboard: {
+    enabled: true,
   },
 
-
-
-
+  breakpoints: {
+    1024: {
+      // effect:'fade',
+      enabled: true,
+    },
+    320: {
+      // effect:false,
+      enabled: false,
+    },
+  },
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
-    clickable: true, 
+    clickable: true,
   },
 
   // Navigation arrows
@@ -35,3 +42,17 @@ const swiper = new Swiper('.swiper', {
   //   el: '.swiper-scrollbar',
   // },
 });
+const mainSwiper = document.querySelector('.swiper');
+window.addEventListener('resize', addScrollBody);
+addScrollBody()
+
+function addScrollBody () {
+  const widthBody = document.body.clientWidth;
+  if (widthBody <= 1024) {
+    mainSwiper.classList.add('swiper-scroll');
+    console.log(mainSwiper);
+  } else {
+    mainSwiper.classList.remove('swiper-scroll');
+  }
+}
+
