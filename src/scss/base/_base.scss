@@ -16,7 +16,19 @@ body {
 }
 .swiper-scroll {
   overflow: scroll;
+
 }
+
+.pagination-none {
+  display: none;
+}
+// .wrapper {
+// 	min-height: 100vh;
+// 	display: flex;
+// 	flex-direction: column;
+// 	position: relative;
+
+// }
 
 .swiper-slide:nth-child(2) {
   // display: none;
@@ -58,15 +70,6 @@ body {
 // .btn-active {
 // 	background: red;
 // 	padding: 20px;
-
-// }
-
-// .wrapper {
-// 	min-height: 100vh;
-// 	display: flex;
-// 	flex-direction: column;
-// 	overflow: hidden;
-// 	position: relative;
 
 // }
 

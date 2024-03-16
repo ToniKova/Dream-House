@@ -179,6 +179,18 @@
 
 @media (max-width: 1023px) {
   .slide-two {
-    display: none;
+    &__wrapper {
+      padding-top: calc(10.52vw + 65px);
+    }
+    // display: none;
   }
 }
+
+@media (max-width: 770px) {
+  .slide-two {
+    &__count-wrapper {
+      // grid-template-columns: 1fr 1fr;
+      
+    }
+  }
+} 

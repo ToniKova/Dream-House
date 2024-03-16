@@ -5,7 +5,6 @@ import swiper from "./modules/swiper";
 
 
 
-
 // const swiper = new Swiper('.swiper', {
   // Optional parameters
 //   direction: 'vertical',

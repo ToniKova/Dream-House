@@ -519,6 +519,9 @@
 
 @media (max-width: 540px) {
   .header {
+    &__logo {
+      margin-right: 30px;
+    }
     &__call {
       display: none;
     }
