@@ -14,6 +14,11 @@ body {
   height: 100vh;
   // overflow: scroll;
 }
+
+.swiper-wrapper {
+  flex-direction: column;
+}
+
 .swiper-scroll {
   overflow: scroll;
 
@@ -34,10 +39,7 @@ body {
   // display: none;
 }
 
-// .swiper-wrapper {
-//   pointer-events: none;
-//   touch-action: none;
-// }
+
 
 // .slide-img {
 // 	position: absolute;
