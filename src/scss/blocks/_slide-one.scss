@@ -48,6 +48,7 @@
 
 @media (max-width: 1023px) {
   .slide-one {
+    // height: 800px;
     .slide-img {
       background-position: left bottom;
     }
@@ -63,7 +64,7 @@
       text-align: center;
       z-index: 9;
       position: absolute;
-      top: calc(266 * 100% / 1080);
+      top: calc(320 * 100% / 1080);
       // left: calc(314 * 100% / 1920);
       left: 50%;
       transform: translateX(-50%);
@@ -86,7 +87,7 @@
       object-position: 35%;
     }
     &__title {
-      top: calc(320 * 100% / 1080);
+      top: calc(360 * 100% / 1080);
     }
     &__sub-title {
       padding-top: 140px;
