@@ -114,12 +114,129 @@
 }
 // @media(max-wigth:1600px) {}
 // @media(max-wigth:1600px) {}
-
+.form-mobail {
+  display: none;
+}
 
 @media (max-width: 1023px) {
   .header {
     &__forma {
+      position: static;
       display: none;
     }
+    &__label {
+      font-size: 18px;
+    }
+    &__wrapper-input {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+    &__input {
+      font-size: 18px;
+      padding: 0px 0px 5px 0px;
+      color: #000;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15)
+    }
+    &__label {
+      font-weight: 400;
+      color: #000;
+    }
+    &__box-btn {
+      svg {
+        width: 140px;
+        stroke: var(--hover-color);
+      }
+    } 
+      
+    &__form-btn {
+      letter-spacing: 7px;
+      font-size: 18px;
+      color: var(--hover-color);
+    
+    }
+    
+  }
+  .form-mobail {
+    background-color: #fff;
+    padding: 80px 50px;
+    color: #000;
+    // height: 300px;
+    display: block;
   }
 } 
+
+@media (max-width: 540px) {
+  .header {
+  
+    &__input {
+      font-size: 16px;
+    }
+    &__label {
+      font-size: 16px;
+    }
+    &__form-btn {
+      font-size: 16px;
+      color: var(--hover-color);
+      letter-spacing: 4px;
+    }
+    &__box-btn {
+      svg {
+        max-width: 100px;
+        stroke: var(--hover-color);
+      }
+    }
+    &__box-btn {
+      // gap: 10px;
+    }
+  }
+  .form-mobail {
+    background-color: #fff;
+    padding: 55px 30px;
+    color: #000;
+    // height: 300px;
+    display: block;
+  }
+  .header__input:focus + .header__label, .header__input:not(:focus):valid + .header__label {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 385px) {
+  .header {
+    &__form-btn {
+      letter-spacing: 2.5px;
+      font-size: 18px;
+      color: var(--hover-color);
+    
+    }
+    &__input {
+      font-size: 15px;
+    }
+    &__label {
+      font-size: 15px;
+    }
+    &__form-btn {
+      font-size: 14px;
+    }
+    &__box-btn {
+      svg {
+        max-width: 80px;
+        stroke: var(--hover-color);
+      }
+    }
+    &__box-btn {
+      // gap: 10px;
+    }
+  }
+  .form-mobail {
+    background-color: #fff;
+    padding: 55px 30px;
+    color: #000;
+    // height: 300px;
+    display: block;
+  }
+  .header__input:focus + .header__label, .header__input:not(:focus):valid + .header__label {
+    font-size: 12px;
+  }
+}

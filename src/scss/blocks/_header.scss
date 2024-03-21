@@ -28,6 +28,7 @@
   }
 
   &__top {
+    transition: 0.4s;
     position: relative;
     z-index: 100;
     display: flex;
@@ -323,6 +324,13 @@
   flex-direction: column;
 }
 
+.header-height {
+  height: 100%;
+}
+
+
+
+
 // .header__input:focus + .header__label,
 // .header__input:not(:focus):valid + .header__label {
 //   top: -20px;
@@ -476,6 +484,15 @@
 
 @media (max-width: 1023px) {
   .header {
+    .header-blure {
+      transition: 0.4s;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 0px 20px;
+      backdrop-filter: blur(10px);
+    }
     // &__text-wrapper {
     //   width: 100%;
     //   padding: 0;
@@ -503,7 +520,9 @@
     }
     &__top {
       position: relative;
+      transition: 0.4s;
       &::before {
+        transition: 0.4s;
         position: absolute;
         bottom: 0;
         left: 0;

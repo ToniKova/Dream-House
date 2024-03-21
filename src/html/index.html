@@ -13,20 +13,23 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <!-- <div class="wrapper"></div> -->
     
     <header class="header">
+      @@include('blocks/header__content.html')
+   
       <!-- Swiper -->
+      <div class="wrapper">
+      </div>
 
-      @@include('blocks/swiper.html')
 
       <!-- Slider content -->
+      @@include('blocks/swiper.html')
 
       <!-- Header content -->
 
-      @@include('blocks/header__content.html')
-    </header>
+      
 
+    </header>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./js/index.bundle.js"></script>
   </body>

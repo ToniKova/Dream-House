@@ -11,8 +11,11 @@ body {
 
 .swiper {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   // overflow: scroll;
+}
+.swiper-destroy {
+  height: 100%;
 }
 
 .swiper-wrapper {
@@ -20,13 +23,16 @@ body {
 }
 
 .swiper-scroll {
-  overflow: scroll;
-
+  overflow: auto;
 }
 
 .pagination-none {
   display: none;
 }
+
+
+
+
 // .wrapper {
 // 	min-height: 100vh;
 // 	display: flex;

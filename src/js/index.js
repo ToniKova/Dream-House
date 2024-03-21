@@ -1,5 +1,12 @@
 // import castSlide from "./modules/castomSlider";
 import swiper from "./modules/swiper";
+import scroll from "./modules/scroll";
+
+
+
+// { capture: true }
+
+
 
 
 

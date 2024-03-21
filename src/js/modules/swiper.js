@@ -1,15 +1,26 @@
 const breakpoint = window.matchMedia('(min-width: 1023px)')
 const mainSwiper = document.querySelector('.swiper');
+const headerHeight = document.querySelector('.header')
+const headerTop = document.querySelector('.header__top')
 let mySwiper;
 
 if (breakpoint.matches === true) {
   enableSwiper()
+  headerHeight.classList.remove('header-height')
   
 } else if (breakpoint.matches === false ) {
   if ( mySwiper !== undefined ) {
     mySwiper.destroy( true, true )
   } 
-  mainSwiper.classList.add('swiper-scroll')
+  headerTop.classList.add('header-blure')
+  headerHeight.classList.add('header-height')
+
+
+
+  
+  // mainSwiper.classList.add('swiper-scroll')
+  // headerTop
+  // mainSwiper.classList.add('swiper-destroy')
 
 }
 function enableSwiper  () {

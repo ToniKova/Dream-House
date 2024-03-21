@@ -183,9 +183,9 @@
 
 @media (max-width: 1022px) {
   .slide-two {
-    height: 900px;
+    height: 800px;
     &__wrapper {
-      padding-top: calc(10.52vw + 65px);
+      padding-top: calc(10.52vw + 35px);
       // text-align: center;
     }
     &__title {
@@ -239,7 +239,7 @@
   .slide-two {
     
     &__title {
-      margin-bottom: 40px;
+      margin-bottom: 60px;
       font-size: 13px;
       // grid-template-columns: 1fr 1fr;
       
@@ -276,7 +276,7 @@
 @media(max-width: 580px) {
   .slide-two {
     &__wrapper {
-      padding-top: calc(10.52vw + 75px);
+      padding-top: calc(10.52vw + 45px);
     }
     &__count {
       font-size: 40px;
