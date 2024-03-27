@@ -496,15 +496,15 @@
    
   }
 }
-@media(max-width: 426px) {
+@media(max-width: 410px) {
   .slide-three {
     &__wrapper-interactive {
-      width: 270px;
+      width: 295px;
     }
     &__wrapper-section {
       &:hover {
         .slide-three__wrapper-interactive {
-          width: 270px;
+          width: 295px;
         }
       }
     }
