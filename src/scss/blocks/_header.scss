@@ -417,6 +417,9 @@
 }
 @media (max-width: 1440px) {
   .header {
+    &__text-wrapper {
+      display: none;
+    }
     &__nav {
       // padding:  1.77vw 0vw;
       // padding:  1.47vw 0vw;
@@ -458,7 +461,7 @@
     //     display: none;
     //   }
     // }
-
+  
     &__icon {
       svg {
         // width: calc(0.63vw + 5px);
@@ -469,15 +472,16 @@
 
 @media (max-width: 1300px) {
   .header {
-    &__text-wrapper {
-      display: none;
-    }
+   
     &__nav-tel {
       display: none;
     }
 
     &__nav {
       padding: 22px 0px;
+    }
+    &__icon-wrapper {
+      display: none;
     }
   }
 }
