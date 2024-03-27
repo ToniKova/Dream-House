@@ -427,7 +427,7 @@
           margin: 0;
         }
         .slide-three__wrapper-interactive {
-          // margin-bottom: -80px;
+          margin-bottom: 0px; 
 
         }
       }
@@ -448,12 +448,8 @@
     }
     &__wrapper-interactive {
       padding-top: 10px;
-      // visibility: hidden;
-      // opacity: 0;
-      // width: 500px;
-      // transition: 1s;
-      // margin-bottom: -120px;
-      // translate: 470px;
+      margin-bottom: -143px;
+ 
     }
     &__wrapper-btn-gallery {
       justify-content: center;
