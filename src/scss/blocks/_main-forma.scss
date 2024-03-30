@@ -5,8 +5,9 @@
     // padding: 3.13vw 5vw;
     pointer-events: all;
     position: absolute;
-    backdrop-filter: blur(10px);
-    background-color: #ffffff18;
+    // backdrop-filter: blur(10px);
+    // background-color: #ffffff18;
+    background: #ffff;
     bottom: 0;
     right: 0;
     max-width: 740px;
@@ -26,11 +27,12 @@
     left: 0;
     top: 0px;
     // color:  rgba(255, 255, 255, 0.5);
-    color: var(--input-color);
+    // color: var(--input-color);
+    color: #000;
     font-family: var(--font-opensans);
     font-size: 16px;
     // font-size: 1vw;
-    font-weight: 300;
+    font-weight: 400;
     transition: 0.4s;
   }
 
@@ -38,11 +40,10 @@
     padding: 0px 0px 5px 0px;
     font-family: var(--font-opensans);
     font-size: 18px;
-    // font-size: 1.13vw;
-    color: #cccccc;
+    // color: #cccccc;
+    color: #000;
     width: 100%;
-    // border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-    border-bottom: 1px solid var(--input-color);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);;
   }
 
   &__box-btn {
@@ -50,23 +51,25 @@
     align-items: center;
     transition: 0.3s;
     svg {
-      stroke: var(--input-color);
+      // stroke: var(--input-color);
+      stroke: var(--hover-color);
       width: 7.08vw;
     }
-    &:hover {
-      .header__form-btn {
-        color: var(--hover-color);
-        transition: 0.3s;
-      }
-      svg {
-        stroke: var(--hover-color);
-        transition: 0.3s;
-      }
-    }
+    // &:hover {
+    //   .header__form-btn {
+    //     color: var(--hover-color);
+    //     transition: 0.3s;
+    //   }
+    //   svg {
+    //     stroke: var(--hover-color);
+    //     transition: 0.3s;
+    //   }
+    // }
   }
 
   &__form-btn {
-    color: var(--input-color);
+    // color: var(--input-color);
+    color: var(--hover-color);
     font-family: var(--font-opensans);
     font-size: 20px;
     // font-size: 1.25vw;
