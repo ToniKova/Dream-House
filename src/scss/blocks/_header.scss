@@ -113,18 +113,20 @@
       background-color: var(--text-color);
       display: block;
     }
-    &:hover {
-      span {
-        transition: 0.3s;
-        background-color: var(--hover-color);
-      }
-      &::before {
-        transition: 0.3s;
-        background-color: var(--hover-color);
-      }
-      &::after {
-        transition: 0.3s;
-        background-color: var(--hover-color);
+    @media(hover:hover) {
+      &:hover {
+        span {
+          transition: 0.3s;
+          background-color: var(--hover-color);
+        }
+        &::before {
+          transition: 0.3s;
+          background-color: var(--hover-color);
+        }
+        &::after {
+          transition: 0.3s;
+          background-color: var(--hover-color);
+        }
       }
     }
   }
