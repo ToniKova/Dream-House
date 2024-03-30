@@ -5,9 +5,9 @@
   height: 100%;
   z-index: 90;
   left: -100%;
-  // backdrop-filter: blur(15px);
-  // background: rgba(0, 0, 0, 0.3);
-  background: rgb(65, 65, 65);
+  backdrop-filter: blur(15px);
+  background: rgba(0, 0, 0, 0.3);
+  // background: rgb(65, 65, 65);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -279,7 +279,7 @@
     }
     &__contacts-item {
       font-size: 16px;
-      gap: 5px;
+      gap: 10px;
     }
     &__icon-wrapper {
       gap: 10px;
@@ -391,6 +391,9 @@
 }
 
 @media(max-width: 320px) {
+  .footer__title-wrapper .footer__title {
+    letter-spacing: 0.29em;
+  }
   .footer__logo-link img {
     // display: none;
   }
