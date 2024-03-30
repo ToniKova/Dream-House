@@ -302,7 +302,7 @@
     }
     &__item {
       width: 100%;
-      padding: 10px 0px;
+      padding: 30px 0px;
       // height: auto;
       &::before {
         top: 0;
@@ -387,5 +387,14 @@
         letter-spacing: 0.39em;
       }
     }
+  }
+}
+
+@media(max-width: 320px) {
+  .footer__logo-link img {
+    // display: none;
+  }
+  .footer__title-wrapper .footer__title {
+    font-size: 14px;
   }
 }
