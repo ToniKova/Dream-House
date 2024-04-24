@@ -85,6 +85,7 @@
     margin-right: 127px;
     position: relative;
     transition: 0.3s;
+    // padding: 20px;
     &::before {
       content: '';
       position: absolute;
@@ -99,15 +100,20 @@
     &::after {
       content: '';
       position: absolute;
-      bottom: 0;
+      bottom: 0px;
       left: 0;
-      width: 100%;
+      width: 90%;
       height: 2px;
       background-color: var(--text-color);
-      color: var(--text-color);
+      // color: var(--text-color);
       display: block;
+   
     }
     span {
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      transform: translateY(-50%);
       width: 50%;
       height: 2px;
       background-color: var(--text-color);
@@ -130,6 +136,8 @@
       }
     }
   }
+  
+
 
   &__nav-tel {
     font-size: 16px;

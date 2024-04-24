@@ -3,25 +3,28 @@ const mainSwiper = document.querySelector('.swiper');
 const headerHeight = document.querySelector('.header')
 const headerTop = document.querySelector('.header__top')
 let mySwiper;
+const count = document.querySelectorAll('.slide-two__count')
+const speedCountDesktop = 1000
+const speedMobail = 2000
 
 if (breakpoint.matches === true) {
   enableSwiper()
   headerHeight.classList.remove('header-height')
-  
+  mySwiper.on('slideChangeTransitionStart', function () {
+    if (mySwiper.realIndex  === 1) {
+      counterNumber(speedCountDesktop)
+    }
+  });
+
 } else if (breakpoint.matches === false ) {
   if ( mySwiper !== undefined ) {
     mySwiper.destroy( true, true )
   } 
   headerTop.classList.add('header-blure')
   headerHeight.classList.add('header-height')
-
-
-
-  
   // mainSwiper.classList.add('swiper-scroll')
   // headerTop
   // mainSwiper.classList.add('swiper-destroy')
-
 }
 function enableSwiper  () {
   mySwiper = new Swiper('.swiper', {
@@ -29,7 +32,7 @@ function enableSwiper  () {
     loop: true,
     parallax: true,
     speed: 700,
-    effect:'fade',
+    // effect:'fade',
     mousewheel: {
       sensitivity: 1,
     },
@@ -54,11 +57,51 @@ function enableSwiper  () {
   });
 }
 
+function counterNumber (speed) {
+  count.forEach(item => {
+    let findDataCount = parseInt(item.getAttribute('data-counter'))
+    let startInterval = 0
+    let duration = Math.floor(speed / findDataCount)
+    let interval = setInterval(() => {
+      startInterval += 1
+      item.textContent = startInterval
+      if (startInterval === findDataCount) {
+        clearInterval(interval)
+      }
+    },duration)
+  })
+}
+
+// ====================================================================
+const height = 470
+let check = false
+window.addEventListener('scroll', () => {
+  const pixelsScrolled = window.scrollY;
+  if (!check && pixelsScrolled >= height) {
+    counterNumber(speedMobail)
+    check = true
+    console.log(pixelsScrolled)
+  } 
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // window.addEventListener('resize', () => {
 //   const widthBody = document.body.clientWidth;
 //   if (widthBody > 1023) {
-//     InitSwiper();
+    
 //   }
 // });
 // // InitSlider();
