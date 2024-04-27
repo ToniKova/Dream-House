@@ -33,9 +33,9 @@ function enableSwiper  () {
     parallax: true,
     speed: 700,
     // effect:'fade',
-    mousewheel: {
-      sensitivity: 1,
-    },
+    // mousewheel: {
+    //   sensitivity: 1,
+    // },
     keyboard: {
       enabled: true,
     },

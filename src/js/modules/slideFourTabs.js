@@ -2,6 +2,7 @@ const tabTitle = document.querySelectorAll('.slide-four__services-title-item')
 const tabImg = document.querySelectorAll('.slide-four__fon-img')
 const price = document.querySelector('.slide-four__price')
 const counter = document.querySelector('.slide-four__square-counter')
+const tabDescription = document.querySelectorAll('.slide-four__packege-info-item')
 const spedCounter = 500
 // ================================================
 const circle = document.querySelector('.slide-four__progress-ring-circle')
@@ -56,6 +57,10 @@ tabTitle.forEach(item => {
     // Табы для картиок при нажатии на заголовки
     let currentTitle = item
     let currentDataTitle = currentTitle.getAttribute('data-tab')
+    let currentPackegeData = currentTitle.getAttribute('data-packege')
+    console.log(currentPackegeData)
+
+
     let currentCounter = currentTitle.getAttribute('data-count')
     let currentIdImg = document.querySelector(currentDataTitle)
 
@@ -66,6 +71,11 @@ tabTitle.forEach(item => {
       tabTitle.forEach(item => {
         item.classList.remove('title-item-active')
       })
+      tabDescription.forEach(item => {
+        item.classList.remove('description-active')
+      })
+      
+      // currentTabDescription.classList.add('description-active')
       currentIdImg.classList.add('fon-img-active')
       currentTitle.classList.add('title-item-active')
     }
@@ -76,15 +86,25 @@ tabTitle.forEach(item => {
     // Смена прогрессбара по нажатию на заголовки
     setProgress(currentCounter)
     // setProgress(currentCounter)
+    tab(currentDataTitle)
+    // currentDataTitle
 
   })
 }) 
+
+function tab (attr) {
+  tabDescription.forEach(item => {
+    // let currentTabDescription = item.getAttribute(attr)
+  })
+
+  // console.log(`${attr} function`)
+}
 
 
 function startCounter (currentCounter) {
   const parsCounter = parseInt(currentCounter)
   let startCounter = 0
-  let duretion = Math.floor(parsCounter / spedCounter)
+  // let duretion = Math.floor(parsCounter / spedCounter)
   let interval = setInterval(() => {
     startCounter += 1
     counter.textContent = startCounter
