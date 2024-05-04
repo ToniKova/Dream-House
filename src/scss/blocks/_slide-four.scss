@@ -5,7 +5,7 @@
   display: flex;
   // align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.459);
+  background: rgb(37, 37, 37);
 
   
 
@@ -19,7 +19,7 @@
     height: 100%;
     object-fit:cover;
     opacity: 1;
-    animation: showSlide 1.9s 1;
+    animation: showSlide 1.9s ;
 
   }
   @keyframes showSlide {
@@ -56,31 +56,10 @@
  
   &__package-square-wrapper {
     position: relative;
-    // width: calc(var(--index) * 10);
-    // height: calc(var(--index) * 10);
-    // width: 16.625rem;
-    // height: 16.625rem;
     width: 280px;
     height: 280px;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // border: 2px solid rgba(255, 255, 255, 0.4);
-    // background: rgba(126, 125, 125, 0.336);
-    
   }
-  .slide-four__progress-ring {
-    // font-size: 30px;
-    // position: absolute;
-    // width: calc(var(--index) * 11);
-    // height: calc(var(--index) * 11);
-    // width: 15.625rem;
-    // height: 15.625rem;
-    // top: 50%;
-    // left: 49%;
-    // transform: translate(-50%, -50%);
-    
-  }
+  .slide-four__progress-ring {}
   .slide-four__progress-ring-circle-grey {
     fill: transparent;
     stroke: rgba(255, 255, 255, 0.4);
@@ -138,19 +117,14 @@
   }
 
   &__progres-bar {
-    // padding-left: 30px;
     position: absolute;
-    // top: 74px;
-    // left: 0;
     left: calc(0 * 100% / 1920);
-    top: calc(850 * 100% / 1080);
+    top: calc(820 * 100% / 1080);
     width: 100%;
     display: flex;
     gap: 60px;
-    // justify-content: space-between;
     span {
       background: rgba(255, 255, 255, 0.4);
-      // width: calc(var(--index) * 6);
       width: 80px;
       height: 1px;
     }
@@ -169,13 +143,21 @@
     // gap: 80px;
   }
 
+  &__services-title-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // gap: 20px;
+  }
+
   &__services-title-item {
     width: 140px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     cursor: pointer;
+    position: relative;
     @media(hover: hover) {
       &:hover {
         .slide-four__services-title {
@@ -225,6 +207,27 @@
     text-align: center;
     color: var(--text-color);
     
+  }
+
+  // &__packege-info-item-button-wrapper {
+  //   display: flex;
+  //   align-items: center;
+  //   gap: calc(var(--index) * 3);
+  // }
+
+  &__packege-info-item-button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #85858585;
+    border-radius: 100%;
+    font-family: var(--font-opensans);
+    // position: absolute;
+    // top: -30px;
+    display: none;
+    margin-bottom: 5px;
   }
 
   &__services-title-decore {
@@ -287,6 +290,7 @@
   }
 
 
+  
 
   &__package-info-wrapper {
     position: absolute;
@@ -300,8 +304,42 @@
     z-index: 100;
   }
 
+  &__package-button-close {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none;
+    &::before {
+      content: '';
+      width: 2px;
+      height: 100%;
+      background: rgb(177, 177, 177);
+      display: block;
+      transform: rotate(45deg);
+      position: absolute;
+    }
+    &::after {
+      content: '';
+      width: 2px;
+      height: 100%;
+      background: rgb(177, 177, 177);
+      display: block;
+      transform: rotate(-45deg);
+      position: absolute;
+    }
+  }
+
+  @keyframes packageInimation {
+    0% {
+      opacity: 5%;
+    }
+  }
+
   &__packege-info-item {
     display: none;
+    animation: packageInimation 1.9s;
   }
   .description-active {
     display: block;
@@ -331,7 +369,7 @@
     font-size: 16px;
     font-family: var(--font-opensans);
     width: 100%;
-    height: 150px;
+    height: 130px;
     padding-right: 15px;
   }
 }
@@ -349,13 +387,19 @@
 
 @media(max-width: 1600px) {
   .slide-four {
-    align-items: center;
+    // align-items: center;
     &__wrapper {
-      padding-top: 0px;
+      padding-top: 150px;
     }
     &__package-square-wrapper {
       width: calc(var(--index) * 11);
       height: calc(var(--index) * 11);
+    }
+    &__package-info-wrapper {
+      width: calc(var(--index) * 25);
+    }
+    &__package-description {
+      height: calc(var(--index) * 4);
     }
     
   }
@@ -373,6 +417,12 @@
     }
     &__price {
       font-size: calc(var(--index) * 2.0);
+    }
+    &__package-title {
+      font-size: 20px;
+    }
+    &__package-description {
+      font-size: 14px;
     }
     
   }
@@ -451,6 +501,10 @@
     display: block;
     padding: 60px 0px;
     height: auto;
+    &__wrapper {
+      padding-top: 0px;
+    }
+
     &__package-wrapper {
       flex-direction: column;
       // align-items: center;
@@ -462,6 +516,7 @@
     &__package-square-wrapper {
       width: calc(var(--index)* 15);
       height: calc(var(--index)* 15);
+      margin-bottom: 20px;
     }
    
     &__square-counter {
@@ -473,6 +528,7 @@
     }
 
     &__progres-bar {
+      top: calc(900 * 100% / 1080);
       svg {
         display: none;
       }
@@ -488,6 +544,49 @@
     }
     &__services-title {
       font-size: calc(var(--index)* 1.6);
+    }
+
+    .pop-up-active {
+      right: 50%;
+    }
+
+    &__package-info-wrapper {
+      top: 50%;
+      right: -50%;
+      transform: translate(50%, -50%);
+      bottom: auto;
+      background: var(--text-color);
+      backdrop-filter: none;
+      padding: 50px 20px 20px;
+      transition: 0.7s;
+      // display: none;
+    }
+    &__packege-info-item {
+      display: none;
+      animation: packageInimation 0.5s;
+    }
+
+    &__package-title {
+      color: #333333;
+      &::before {
+        background: rgb(177, 177, 177)
+      }
+    }
+    &__package-description {
+      color: #000;
+      height: 300px;
+      font-size: 15px;
+    }
+
+    &__packege-info-item-button {
+      top: -40px;
+      display: block;
+    }
+
+    &__package-button-close {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }
@@ -581,6 +680,11 @@
     &__square-counter {
       font-size: 35px;
     }
+    &__packege-info-item-button {
+      width: 25px;
+      height: 25px;
+    }
+
   }
 }
 
@@ -626,9 +730,11 @@
         height: 4px;
       }
     }
-
     &__progres-bar {
       gap: 42px;
+    }
+    &__package-square-wrapper {
+      margin-bottom: 40px;
     }
 
   }

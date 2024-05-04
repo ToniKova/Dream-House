@@ -4,6 +4,10 @@ const price = document.querySelector('.slide-four__price')
 const counter = document.querySelector('.slide-four__square-counter')
 const tabDescription = document.querySelectorAll('.slide-four__packege-info-item')
 const spedCounter = 500
+const buttonInfo = document.querySelectorAll('.slide-four__packege-info-item-button')
+const mobailPopUp = document.querySelector('.slide-four__package-info-wrapper')
+const buttonClosePopUp = document.querySelector('.slide-four__package-button-close')
+console.log(buttonInfo)
 // ================================================
 const circle = document.querySelector('.slide-four__progress-ring-circle')
 function setProgress (dataCount) {
@@ -58,10 +62,8 @@ tabTitle.forEach(item => {
     let currentTitle = item
     let currentDataTitle = currentTitle.getAttribute('data-tab')
     let currentPackegeData = currentTitle.getAttribute('data-packege')
-    console.log(currentPackegeData)
-
-
     let currentCounter = currentTitle.getAttribute('data-count')
+    let currentTabDescription = document.querySelector(currentPackegeData)
     let currentIdImg = document.querySelector(currentDataTitle)
 
     if (!currentTitle.classList.contains('title-item-active')) {
@@ -74,10 +76,11 @@ tabTitle.forEach(item => {
       tabDescription.forEach(item => {
         item.classList.remove('description-active')
       })
-      
-      // currentTabDescription.classList.add('description-active')
+
       currentIdImg.classList.add('fon-img-active')
       currentTitle.classList.add('title-item-active')
+      currentTabDescription.classList.add('description-active')
+
     }
 
     price.textContent = item.getAttribute('data-price')
@@ -85,22 +88,16 @@ tabTitle.forEach(item => {
     // ====================================================
     // Смена прогрессбара по нажатию на заголовки
     setProgress(currentCounter)
-    // setProgress(currentCounter)
-    tab(currentDataTitle)
-    // currentDataTitle
 
   })
 }) 
 
-function tab (attr) {
-  tabDescription.forEach(item => {
-    // let currentTabDescription = item.getAttribute(attr)
-  })
-
-  // console.log(`${attr} function`)
+function tabsInfoPackege () {
+  
 }
 
 
+// Счетчик внутри прогрес бара
 function startCounter (currentCounter) {
   const parsCounter = parseInt(currentCounter)
   let startCounter = 0
@@ -113,7 +110,38 @@ function startCounter (currentCounter) {
     }
   })
 }
+//Кнопка закрытия поп-ап
+buttonClosePopUp.addEventListener('click', () => {
+  mobailPopUp.classList.remove('pop-up-active')
+})
 
-document.querySelector('.slide-four__services-title-item').click()
 
+
+function showPopUp () {
+  buttonInfo.forEach(item => {
+    item.addEventListener('click', () => {
+      let dataPackegaInfo = item.getAttribute('data-packege-info')
+      let currentTabDescription = document.querySelector(dataPackegaInfo)
+
+      tabDescription.forEach(item => {
+        item.classList.remove('description-active')
+      })
+
+      currentTabDescription.classList.add('description-active')
+      mobailPopUp.classList.add('pop-up-active')
+
+    })
+  })
+}
+showPopUp()
+
+
+
+const breakpoint = window.matchMedia('(min-width: 1023px)')
+if (breakpoint.matches === true) {
+  document.querySelector('.slide-four__services-title-item').click()
+}
+// document.addEventListener('click', (e) => {
+//   console.log(e.target)
+// })
 export default slidefourTabs 

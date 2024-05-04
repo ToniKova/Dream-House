@@ -32,7 +32,7 @@ function enableSwiper  () {
     loop: true,
     parallax: true,
     speed: 700,
-    // effect:'fade',
+    effect:'fade',
     // mousewheel: {
     //   sensitivity: 1,
     // },
