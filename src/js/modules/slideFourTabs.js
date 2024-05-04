@@ -3,13 +3,11 @@ const tabImg = document.querySelectorAll('.slide-four__fon-img')
 const price = document.querySelector('.slide-four__price')
 const counter = document.querySelector('.slide-four__square-counter')
 const tabDescription = document.querySelectorAll('.slide-four__packege-info-item')
-const spedCounter = 500
 const buttonInfo = document.querySelectorAll('.slide-four__packege-info-item-button')
 const mobailPopUp = document.querySelector('.slide-four__package-info-wrapper')
 const buttonClosePopUp = document.querySelector('.slide-four__package-button-close')
-console.log(buttonInfo)
-// ================================================
 const circle = document.querySelector('.slide-four__progress-ring-circle')
+// ================================================
 function setProgress (dataCount) {
   const parsDataCount = parseInt(dataCount)
   const radius = circle.r.baseVal.value
@@ -92,7 +90,7 @@ tabTitle.forEach(item => {
   })
 }) 
 
-function tabsInfoPackege () {
+function tabsInfoPackage () {
   
 }
 
@@ -116,11 +114,11 @@ buttonClosePopUp.addEventListener('click', () => {
 })
 
 
-
+// поп-ап информации про пакет услуг ELIT/VIP/EXTRA
 function showPopUp () {
   buttonInfo.forEach(item => {
     item.addEventListener('click', () => {
-      let dataPackegaInfo = item.getAttribute('data-packege-info')
+      let dataPackegaInfo = item.getAttribute('data-package-info')
       let currentTabDescription = document.querySelector(dataPackegaInfo)
 
       tabDescription.forEach(item => {
@@ -129,7 +127,6 @@ function showPopUp () {
 
       currentTabDescription.classList.add('description-active')
       mobailPopUp.classList.add('pop-up-active')
-
     })
   })
 }
@@ -138,8 +135,10 @@ showPopUp()
 
 
 const breakpoint = window.matchMedia('(min-width: 1023px)')
-if (breakpoint.matches === true) {
-  document.querySelector('.slide-four__services-title-item').click()
+if (breakpoint.matches === false) {
+  const oneItem = document.querySelector('.slide-four__services-title-item').click()
+} else {
+  const oneItem = document.querySelector('.slide-four__services-title-item').click()
 }
 // document.addEventListener('click', (e) => {
 //   console.log(e.target)
