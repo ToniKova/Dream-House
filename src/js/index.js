@@ -2,7 +2,8 @@ import burgerNav from "./modules/burgerNav";
 import swiper from "./modules/swiper";
 import scroll from "./modules/scroll";
 import slideTwoCounter from "./modules/slide-two-counter"
-import slidefourTabs from "./modules/slideFourTabs";
+// import slidefourTabs from "./modules/slideFourTabs";
+import slideFiveSwiper from "./modules/slideFiveSwiper"
 
 
 

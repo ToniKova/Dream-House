@@ -13,7 +13,7 @@ function setProgress (dataCount) {
   const radius = circle.r.baseVal.value
   const circumference = 2 * Math.PI * radius
   // const offset =  parsDataCount / 200 * circumference
-  const offset =  circumference - parsDataCount / 200 * circumference
+  const offset =  circumference - (parsDataCount / 200) * circumference
 
   circle.style.strokeDasharray = `${circumference} ${circumference}`
   circle.style.strokeDashoffset = offset
@@ -89,11 +89,6 @@ tabTitle.forEach(item => {
 
   })
 }) 
-
-function tabsInfoPackage () {
-  
-}
-
 
 // Счетчик внутри прогрес бара
 function startCounter (currentCounter) {

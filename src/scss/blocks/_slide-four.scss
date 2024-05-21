@@ -58,8 +58,10 @@
     position: relative;
     width: 280px;
     height: 280px;
+   
   }
-  .slide-four__progress-ring {}
+  .slide-four__progress-ring {
+  }
   .slide-four__progress-ring-circle-grey {
     fill: transparent;
     stroke: rgba(255, 255, 255, 0.4);
@@ -76,6 +78,14 @@
     transition: stroke-dashoffset 1s;
   }
   
+  .slide-four__progress-circle-static {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    fill: var(--hover-color);
+  }
+
   &__square-info {
     // display: none;
     position: absolute;

@@ -22,10 +22,9 @@ if (breakpoint.matches === true) {
   } 
   headerTop.classList.add('header-blure')
   headerHeight.classList.add('header-height')
-  // mainSwiper.classList.add('swiper-scroll')
-  // headerTop
-  // mainSwiper.classList.add('swiper-destroy')
+
 }
+
 function enableSwiper  () {
   mySwiper = new Swiper('.swiper', {
     direction: 'vertical',
