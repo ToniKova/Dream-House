@@ -15,14 +15,14 @@
     // max-width: 46.25vw;
     border-radius: 4px;
     transition: 0.8s;
-    display: none;
-    // &:hover {
-    //   right: 0px;
-    //   transition: 0.8s;
-    //   .arrow-hover {
-    //     opacity: 0;
-    //   }
-    // }
+    // display: none;
+    &:hover {
+      right: 0px;
+      transition: 0.8s;
+      .arrow-hover {
+        opacity: 0;
+      }
+    }
     .arrow-hover {
       position: absolute;
       top: 50%;

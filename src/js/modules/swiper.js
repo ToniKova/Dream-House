@@ -15,12 +15,11 @@ if (breakpoint.matches === true) {
     if (mySwiper.realIndex  === 1) {
       counterNumber(speedCountDesktop)
     }
-    if (mySwiper.realIndex  !== 4) {
-      displayElement.style.visibility = 'hidden';
-    } else {
-      displayElement.style.visibility = 'visible';
-
-    }
+    // if (mySwiper.realIndex  !== 4) {
+    //   displayElement.style.visibility = 'hidden';
+    // } else {
+    //   displayElement.style.visibility = 'visible';
+    // }
   });
 
 } else if (breakpoint.matches === false ) {

@@ -6,7 +6,7 @@
   // align-items: center;
   justify-content: center;
   background: rgb(37, 37, 37);
-  z-index: 300;
+  z-index: 10;
 
   
 
@@ -21,7 +21,6 @@
     object-fit:cover;
     opacity: 1;
     animation: showSlide 1.9s ;
-    z-index: 90;
   }
   @keyframes showSlide {
     0% {
@@ -49,7 +48,7 @@
   &__package-wrapper {
     position: relative;
     display: flex;
-    z-index: 300;
+    z-index: 2;
 
     align-items: center;
     gap: 30px;

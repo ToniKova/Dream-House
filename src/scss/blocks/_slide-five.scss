@@ -52,11 +52,11 @@
   }
   &__progress-ring-circle-grey {
     stroke: rgba(255, 255, 255, 0.4);
-    stroke-width: 2px;
+    stroke-width: 1.5px;
   }
   &__progress-ring-circle {
     stroke: var(--hover-color);
-    stroke-width: 2px;
+    stroke-width: 1.5px;
     transition: 0.5s;
   }
 
@@ -137,9 +137,7 @@
     width: 800px;
     position: relative;
     // display: none;
-    visibility: hidden;
-    // visibility: visible;
-
+    // visibility: hidden;
     // width: calc(var(--index) * 40);
   }
    
