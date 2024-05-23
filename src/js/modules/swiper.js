@@ -2,6 +2,7 @@ const breakpoint = window.matchMedia('(min-width: 1023px)')
 const mainSwiper = document.querySelector('.swiper');
 const headerHeight = document.querySelector('.header')
 const headerTop = document.querySelector('.header__top')
+const displayElement = document.querySelector('.slide-five__slider-wrapper')
 let mySwiper;
 const count = document.querySelectorAll('.slide-two__count')
 const speedCountDesktop = 1000
@@ -13,6 +14,12 @@ if (breakpoint.matches === true) {
   mySwiper.on('slideChangeTransitionStart', function () {
     if (mySwiper.realIndex  === 1) {
       counterNumber(speedCountDesktop)
+    }
+    if (mySwiper.realIndex  !== 4) {
+      displayElement.style.visibility = 'hidden';
+    } else {
+      displayElement.style.visibility = 'visible';
+
     }
   });
 
@@ -32,6 +39,7 @@ function enableSwiper  () {
     parallax: true,
     speed: 700,
     effect:'fade',
+    nested: true,
     // mousewheel: {
     //   sensitivity: 1,
     // },

@@ -10,7 +10,8 @@ if (swipperSlideFive) {
   let swiper = new Swiper(swipperSlideFive, {
     slideClass: 'slide-five__swiper-slide',
     wrapperClass: 'slide-five__swiper-wrapper',
-
+    simulateTouch: false,
+    // nested: true,
     navigation: {
       nextEl: '.next',
       prevEl: '.prev',
@@ -18,18 +19,54 @@ if (swipperSlideFive) {
    
   })
 }
+// ========================================================
+// Настройка SVG круга для анимации
+const ringCircleActive = document.querySelector('.slide-five__progress-ring-circle')
+const pathLength = ringCircleActive.getTotalLength();
+let stepCounter = 1
+let stepCountertwo = 0
 
-// Активация первого активной точки
+
+ringCircleActive.style.strokeDasharray = pathLength;
+ringCircleActive.style.strokeDashoffset = pathLength;
+
+// функция для установки прогресса
+function setProgress (percent) {
+  const offset = pathLength - (percent / 100) * pathLength;
+  ringCircleActive.style.strokeDashoffset = offset;
+}
+function updateProgressBar () {
+  const progressPercentage = (stepCountertwo / 6 ) * 100;
+  setProgress(progressPercentage)
+
+}
+
+// ==============================================================
+// Активация первой активной точки
 function activeFirstDot () {
   firstDot.classList.add('active-circle-bg')
   firstDot.classList.add('active-circle-dot')
 }
 activeFirstDot ()
 
+// Индикатор шагов 
+// let stepCounter = 1 
+circleCounter.textContent = stepCounter
+window.addEventListener('click', (e) => {
+  if (e.target.classList.contains('next')) {
+    nextActiveDot()
+    updateProgressBar()
+  } else if (e.target.classList.contains('prev')) {
+    prevActiveDots()
+    updateProgressBar()
+
+  }
+})
 
 function nextActiveDot () {
   firstDot.classList.remove('active-circle-dot')
   stepCounter ++
+  stepCountertwo ++
   circleCounter.textContent = stepCounter 
   stepDots.forEach((item, index) => {
     // const currentAttribute = item.getAttribute('data-step')
@@ -44,6 +81,7 @@ function nextActiveDot () {
 
 function prevActiveDots () {
   stepCounter --
+  stepCountertwo --
   circleCounter.textContent = stepCounter 
   stepDots.forEach((item, index) => {
     // const currentAttribute = item.getAttribute('data-step')
@@ -61,31 +99,3 @@ function prevActiveDots () {
   })
 }
 
-// Индикатор шагов 
-let stepCounter = 1 
-circleCounter.textContent = stepCounter
-window.addEventListener('click', (e) => {
-  if (e.target.classList.contains('next')) {
-    nextActiveDot()
-  } else if (e.target.classList.contains('prev')) {
-    prevActiveDots()
-  }
-})
-
-
-// btnNext.addEventListener('click', activeStepsDot)
-// function activeStepsDot () {
-//   stepCounter ++
- 
-//   stepDots.forEach(item => {
-//     const dataStep = parseInt(item.getAttribute('data-step')) 
-//     // console.log(dataStep)
-//     if (dataStep === stepCounter) {
-//       item.classList.add('active-circle-dot')
-//       item.classList.add('active-circle-bg')
-//     }
-//   })
- 
- 
-// }
-// activeStepsDot()

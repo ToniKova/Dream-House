@@ -9,19 +9,20 @@
     background-color: #ffffff18;
     // background: #ffff;
     bottom: 0;
-    // right: 0;
-    right: -33%;
+    right: 0;
+    // right: -33%;
     max-width: 740px;
     // max-width: 46.25vw;
     border-radius: 4px;
     transition: 0.8s;
-    &:hover {
-      right: 0px;
-      transition: 0.8s;
-      .arrow-hover {
-        opacity: 0;
-      }
-    }
+    display: none;
+    // &:hover {
+    //   right: 0px;
+    //   transition: 0.8s;
+    //   .arrow-hover {
+    //     opacity: 0;
+    //   }
+    // }
     .arrow-hover {
       position: absolute;
       top: 50%;
